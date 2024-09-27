@@ -1,1 +1,3 @@
-Add URL list. Encode in Base64. Don't use scan_id for post or retrieve.
+-Add URL list
+-Encode in Base64 (kind of finished)
+-Don't use scan_id for post or retrieve

@@ -1,1 +1,1 @@
-The URL's don't get encoded into base 64, wich they need to. Also using vt.client wich causes error's. Need App Passwort for Gmail, because Less Secure Apps does not exist any more.
+The URL's don't get encoded into base 64,(they kind of do now) wich they need to. Also using vt.client wich causes error's(fixed by removing vt.Client). Need App Passwort for Gmail, because Less Secure Apps does not exist any more.(Done)
