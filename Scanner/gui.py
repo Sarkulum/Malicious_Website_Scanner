@@ -1,5 +1,6 @@
 import tkinter as tk
 import os
+import subprocess
 
 def save_credentials():
     # Get user inputs from entry fields
@@ -7,13 +8,13 @@ def save_credentials():
     gmail_account = gmail_entry.get()
     app_password = app_password_entry.get()
 
-    # Save input as os variables
-    os.environ["VIRUSTOTAL_API_KEY"] = virustotal_api
-    os.environ["EMAIL_USERNAME"] = gmail_account
-    os.environ["APP_PASSWORD"] = app_password
+    # Use setx to set permanent environment variables
+    subprocess.run(['setx', 'VIRUSTOTAL_API_KEY', virustotal_api])
+    subprocess.run(['setx', 'EMAIL_USERNAME', gmail_account])
+    subprocess.run(['setx', 'APP_PASSWORD', app_password])
 
-    # Saved successfull message
-    status_label.config(text="Credentials saved successfully!", fg="green")
+    # Saved successful message
+    status_label.config(text="Credentials saved successfully! Please restart any open command windows.", fg="green")
 
 # Create main window
 window = tk.Tk()
